@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+</head>
+<body>
+    <h1>Mon Profil</h1>
+
+    <div id="profile">
+        <img id="profileImage" src="/default-profile.jpg" alt="Image de Profil" width="150" height="150">
+        <p>Prénom: <span id="prenom"></span></p>
+        <p>Nom: <span id="nom"></span></p>
+        <p>Email: <span id="email"></span></p>
+    </div>
+
+    <h2>Modifier Profil</h2>
+    <form id="profileForm" enctype="multipart/form-data">
+        <label for="newPrenom">Prénom:</label>
+        <input type="text" id="newPrenom" name="prenom"><br>
+        
+        <label for="newNom">Nom:</label>
+        <input type="text" id="newNom" name="nom"><br>
+        
+        <label for="newEmail">Email:</label>
+        <input type="email" id="newEmail" name="email"><br>
+        
+        <label for="newPassword">Nouveau Mot de Passe:</label>
+        <input type="password" id="newPassword" name="password"><br>
+        
+        <label for="profileImageUpload">Image de Profil:</label>
+        <input type="file" id="profileImageUpload" name="profileImage"><br>
+
+        <button type="submit">Mettre à jour</button>
+    </form>
+
+    <h2>Supprimer Profil</h2>
+    <form id="deleteProfileForm">
+        <label for="deletePassword">Mot de passe:</label>
+        <input type="password" id="deletePassword" name="password"><br>
+
+        <button type="submit">Supprimer Profil</button>
+    </form>
+
+    <button onclick="logout()">Se Déconnecter</button>
+
+    <!-- <script src="./ui/profile.js"></script> -->
+</body>
+</html>
